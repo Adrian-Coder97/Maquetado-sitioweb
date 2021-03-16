@@ -154,7 +154,7 @@ a:hover{
         padding: 0 10px;
     }
 
-@media all and (max-width: 800px){
+@media all and (max-width: 1120px){
     .section{
         flex-direction: column;/*pasar el aside hacia abajo en vez de al lado del section*/
     }
@@ -166,11 +166,28 @@ a:hover{
         display: flex;
         justify-content: center;/*poner las 2 columnas de publicidad una al lado de la otra en vez de arriba y abajo*/
     }
+    h1{
+        font-size: 15px;
+    }
+    .texto-principal{
+        height: 450px;
+    }
 }
 
-@media all and (max-width: 600px){
+
+
+@media all and (max-width: 762px){
     .articulos{
         flex-direction: column;
+    }
+}
+
+@media all and (max-width: 650px){
+    .off{
+        display: none;/*QUITAR EL TEXTP DE NOSOTTOS, CONTACTO, ETC PARA QUE SOLO SE VEAN LOS ICNOS*/
+    }
+    .nav a{
+        font-size: 17px;
     }
 }
 
@@ -178,5 +195,9 @@ a:hover{
 @media all and (max-width: 400px){
     .aside{
         flex-direction: column;/*volver a poner las 2 columnas de publicidad una abajo de la otra en de al lado como en 800px*/
+    }
+    h2{
+        font-size: 22px;
+        margin-bottom: 15px;
     }
 }
