@@ -197,7 +197,7 @@ a:hover{
         flex-direction: column;/*volver a poner las 2 columnas de publicidad una abajo de la otra en de al lado como en 800px*/
     }
     h2{
-        font-size: 22px;
+        font-size: 18px;
         margin-bottom: 15px;
     }
 }
