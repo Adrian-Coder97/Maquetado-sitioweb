@@ -1,6 +1,6 @@
 *{/*este aplica a todo el documento*/
     margin: 0px;
-    padding: 10px;
+    padding: 0px;
     box-sizing: border-box;/*para que las cajas no se desborden*/
 
 }
@@ -8,7 +8,9 @@
     display: flex;
     flex-flow: column nowrap;
 }
-
+.margen-interno{
+    padding: 0 50px;/*0 arriba 50 a los lados*/
+}
 a{
     color: #fff;
     text-decoration: none;
@@ -23,7 +25,7 @@ a:hover{
 
 /*HEADER*/
 .header{
-    background: url(/img/sky.jpg);
+    background: url(/img/beach.jpg);
     background-position: center;/*centrar imagen de fondo en el header*/
     background-attachment: contain;/*centrar imagen de fondo en el header*/
     background-size: cover;/*centrar imagen de fondo en el header*/
@@ -52,37 +54,89 @@ a:hover{
         display: flex;
     }
     .texto-principal{
-        background: #f07b3f;
+        height: 580px;
+        display: flex;
+        align-items: center;/*alinear el texto lorem VERTICALMENTE*/
     }
     h1{
-        background: #ffd460;
+        font-family: 'Lora',serif;
+        font-size: 21px;
+        color: #fff;
+        font-weight: 300;
+        text-align: center;
+        line-height: 1.6;       
     }
+ 
 
 /*SECTION*/
 .section{
-    background: #000;
+    background: #f7f7f7;/*color de fondo de la section*/
     display: flex;
 }
     .articulos{
-        background: #4e4e6a;
+        background: #f7f7f7;
         flex: 2 1 auto;
         display: flex;
         flex-flow: row wrap;
     }
-        .article{
-            background: #1f6cb0;
+        .article{/*card*/
             flex: 1 1 40%;
+            color: #444;
+            font-size: 13px;
+            letter-spacing: 1px;
+            margin: 10px 10px 0 0px;
+            flex: 1 1 45%;
+            background: #ececec;/*color fondo gris del card*/
+        }
+        .article img{
+            width: 100%;/*AJUSTAR EL TAMAÑO DE LA IMAGEN AL TAMAÑO DEL CARD*/
+        }
+        .article a{
+            padding: 10px;
+            background: #000;/*fondo de leer mas*/
+            margin: 10px 0;
+            display: inline-block;/*para que tome los masrgenes correctamente*/
+        }
+        .article a:hover{
+            background: #546cc3;/*hover de boton leer mas*/
+        }
+        h3{/*h3 del card*/
+           color: #fff;
+           font-size: 13px;
+           padding: 10px 0;
+           margin-top: -80px; /*poner la fecha encima de la imagen*/
+        }
+        h2{/*hg2 del card*/
+            font-size: 25px;
+            text-transform: uppercase;
+            padding: 0px 0 10px 0;
+            color: #fff;
         }
         .navegacion{
-            background: #70a3c4;
+            background: black;
             flex: 1 1 100%;
+            margin: 10px 10px 0 0px;/*alinear la linea de 1 2 3 .. final con el largo de las cards*/
+        }
+        .navegacion a{
+            padding: 0 10px;
         }
     .aside{
-        background: #f73f52;
+        /*background: #f73f52;*/
         flex: 1 1 auto;
+        margin: 10px 5px 10px 0;
+
+    }
+    .aside img{
+        width: 100%;/*AJUSTAR EL TAMAÑO DE LA IMAGEN AL TAMAÑO DEL CARD DE PUBLICIDAD*/
+    }
+    h4{
+        background: black;/*cuadro negro de texto de publicidad (aside)*/
+        color: white;
+        padding: 10px;
+        text-transform: #ffea85;
     }
         .publicidad{
-            background: #ffea85;
+            /*background: #ffea85;*/
         }
 
 
@@ -90,10 +144,14 @@ a:hover{
     background: #000;
     display: flex;
     justify-content: center;
+    margin-top: 10px;
 }
     .pie{
-        background: #e6af2e;
-        width: 300px;
+        text-align: center;
+        margin-top: 10px;
+    }
+    .pie a{
+        padding: 0 10px;
     }
 
 @media all and (max-width: 800px){
