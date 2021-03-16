@@ -1,0 +1,124 @@
+*{/*este aplica a todo el documento*/
+    margin: 0px;
+    padding: 10px;
+    box-sizing: border-box;/*para que las cajas no se desborden*/
+
+}
+.padre{
+    display: flex;
+    flex-flow: column nowrap;
+}
+
+a{
+    color: #fff;
+    text-decoration: none;
+    font-size: 11px;
+    text-transform: uppercase;
+    padding: 0 10px;
+    letter-spacing: 2px;
+}
+a:hover{
+    color: #343434;
+}
+
+/*HEADER*/
+.header{
+    background: url(/img/sky.jpg);
+    background-position: center;/*centrar imagen de fondo en el header*/
+    background-attachment: contain;/*centrar imagen de fondo en el header*/
+    background-size: cover;/*centrar imagen de fondo en el header*/
+    display: flex;/*cambiar a fila*/
+    flex-flow: column nowrap;
+}
+    .menu{
+        background: rgba(0, 0, 0, .1);
+        display: flex;
+        flex-flow: row nowrap;  
+        align-items: center;
+        height: 60px;
+        border-bottom: 1px solid rgba(255, 255, 255, .5);
+    }
+    .logo{
+        flex: 1 1 auto;
+    }
+    .logo a{
+        font-size: 30px;
+    }
+    .nav{
+        flex: 5 1 auto;
+    }
+    .social{
+        flex: 1 1 auto;
+        display: flex;
+    }
+    .texto-principal{
+        background: #f07b3f;
+    }
+    h1{
+        background: #ffd460;
+    }
+
+/*SECTION*/
+.section{
+    background: #000;
+    display: flex;
+}
+    .articulos{
+        background: #4e4e6a;
+        flex: 2 1 auto;
+        display: flex;
+        flex-flow: row wrap;
+    }
+        .article{
+            background: #1f6cb0;
+            flex: 1 1 40%;
+        }
+        .navegacion{
+            background: #70a3c4;
+            flex: 1 1 100%;
+        }
+    .aside{
+        background: #f73f52;
+        flex: 1 1 auto;
+    }
+        .publicidad{
+            background: #ffea85;
+        }
+
+
+.footer{
+    background: #000;
+    display: flex;
+    justify-content: center;
+}
+    .pie{
+        background: #e6af2e;
+        width: 300px;
+    }
+
+@media all and (max-width: 800px){
+    .section{
+        flex-direction: column;/*pasar el aside hacia abajo en vez de al lado del section*/
+    }
+    .menu{
+        flex-direction: column;
+        height: auto;
+    }
+    .aside{
+        display: flex;
+        justify-content: center;/*poner las 2 columnas de publicidad una al lado de la otra en vez de arriba y abajo*/
+    }
+}
+
+@media all and (max-width: 600px){
+    .articulos{
+        flex-direction: column;
+    }
+}
+
+
+@media all and (max-width: 400px){
+    .aside{
+        flex-direction: column;/*volver a poner las 2 columnas de publicidad una abajo de la otra en de al lado como en 800px*/
+    }
+}
